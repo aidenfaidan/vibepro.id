@@ -102,8 +102,8 @@ body {
     border: none;
     color: #94a3b8;
     font-size: 1rem;
-    font-weight: 600;
-    padding: 10px 20px;
+    font-weight: 500;
+    padding: 10px 10px;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
@@ -325,4 +325,5 @@ body {
         font-size: 0.9rem;
         padding: 8px 15px;
     }
+
 }
