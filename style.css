@@ -90,7 +90,7 @@ body {
 /* Category Filter Design (RATA TENGAH) */
 .category-container {
     display: flex;
-    /* Agar tombol turun ke bawah jika layar sempit */
+    flex-wrap: auto; /* Agar tombol turun ke bawah jika layar sempit */
     justify-content: center; /* KUNCI: Rata Tengah */
     align-items: center;
     gap: 10px;
@@ -98,12 +98,13 @@ body {
 }
 
 .category-btn {
+
     background: transparent;
     border: none;
     color: #94a3b8;
     font-size: 1rem;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
@@ -323,7 +324,7 @@ body {
     
     .category-btn {
         font-size: 0.9rem;
-        padding: 8px 15px;
+        padding: 5px 5px;
+        margin: 10px;
     }
 }
-
