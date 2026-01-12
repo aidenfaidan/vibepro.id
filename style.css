@@ -11,8 +11,7 @@ body {
     color: #ffffff;
     display: flex;
     justify-content: center;
-    /* align-items: center dihapus agar halaman panjang bisa di-scroll dengan enak dari atas */
-    align-items: flex-start; 
+    align-items: flex-start; /* Agar scroll halaman panjang enak dilihat */
     min-height: 100vh;
     padding: 50px 20px;
 }
@@ -20,7 +19,7 @@ body {
 /* --- Container Section --- */
 .pricing-section {
     width: 100%;
-    max-width: 1050px; /* Lebar total container dibatasi agar rapi */
+    max-width: 1050px; /* Lebar maksimal agar tidak terlalu melar di layar lebar */
     text-align: center;
     margin: 0 auto;
 }
@@ -41,10 +40,10 @@ body {
     font-size: 1rem;
 }
 
-/* --- FILTER & SEARCH STYLES (BARU) --- */
+/* --- FILTER & SEARCH STYLES --- */
 .filter-wrapper {
     max-width: 700px;
-    margin: 0 auto 50px auto; /* Posisi Wrapper di tengah */
+    margin: 0 auto 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +70,7 @@ body {
     padding: 15px 20px 15px 50px; /* Padding kiri besar untuk icon */
     background-color: #1e293b;
     border: 1px solid #334155;
-    border-radius: 50px; /* Rounded pill shape */
+    border-radius: 50px; /* Bentuk kapsul */
     color: #fff;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -87,11 +86,11 @@ body {
     color: #64748b;
 }
 
-/* Category Filter Design (RATA TENGAH) */
+/* Category Filter Design (Desktop Default) */
 .category-container {
     display: flex;
-    flex-wrap: wrap; /* Agar tombol turun ke bawah jika layar sempit */
-    justify-content: center; /* KUNCI: Rata Tengah */
+    flex-wrap: wrap; /* Desktop: Turun ke bawah jika layar sempit */
+    justify-content: center; /* Desktop: Rata Tengah */
     align-items: center;
     gap: 15px;
     width: 100%;
@@ -102,12 +101,12 @@ body {
     border: none;
     color: #94a3b8;
     font-size: 1rem;
-    font-weight: 500;
-    padding: 10px 10px;
+    font-weight: 600;
+    padding: 10px 20px;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Teks tombol tidak turun baris */
+    white-space: nowrap; /* Teks tidak turun baris */
 }
 
 /* Efek Hover */
@@ -140,7 +139,7 @@ body {
 /* --- Grid Layout --- */
 .pricing-container {
     display: grid;
-    /* Ukuran kartu min 280px (pas, tidak terlalu lebar/kurus) */
+    /* Ukuran kartu responsif: Minimal 280px, Maksimal 1 fraction */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 10px;
@@ -165,7 +164,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     height: 100%;
-    animation: fadeIn 0.5s ease; /* Efek halus saat filter */
+    animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
@@ -186,7 +185,7 @@ body {
     box-shadow: 0 0 20px rgba(79, 172, 254, 0.2);
 }
 
-/* --- Image Style (Updated) --- */
+/* --- Image Style --- */
 .card-image {
     width: 100%;
     height: 200px;
@@ -296,34 +295,4 @@ body {
     border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    margin-top: auto;
-}
-
-.price-card.popular .btn-order,
-.btn-order:hover {
-    background: #4facfe;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
-}
-
-/* --- Responsive Mobile --- */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 3rem;
-    }
-    
-    .category-container {
-        /* Pastikan di HP tombol tetap rata tengah dan turun baris jika perlu */
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .category-btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
-}
+    transition
